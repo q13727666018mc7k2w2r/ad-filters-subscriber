@@ -17,7 +17,7 @@ application:
   rule:
     #远程规则
     remote:
-    #      - 'https://example.org/rule.txt'
+    #      - 'https://adrules.top/dns.txt'
     #本地规则
     local: #本地规则请将文件移动到项目路径rule目录中
   #      - 'local-rule.txt'
@@ -28,7 +28,7 @@ application:
       ! Last Modified: ${date}
       ! Homepage: https://github.com/fordes123/ad-filters-subscriber/
     path: rule   #规则文件输出路径，相对路径默认从 项目目录开始
-    files:
+    文件:
       all.txt: #输出文件名
         - DOMAIN  #域名规则，仅完整域名
         - REGEX   #正则规则，包含正则的域名规则，AdGH支持
