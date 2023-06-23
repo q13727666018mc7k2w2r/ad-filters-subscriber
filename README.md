@@ -1,6 +1,7 @@
 <div align="center">
 <h1>AD Filter Subscriber</h1>
-  <p>
+  <p>无编程基础新手探索用，copy 修改Bibaiji大佬的规则
+    
     广告过滤规则订阅器，整合不同来源的规则，帮助你快速构建属于自己的规则集~
   </p>
 <!-- Badges -->
@@ -65,7 +66,7 @@ application:
       ! Last Modified: ${date}
       ! Homepage: https://github.com/fordes123/ad-filters-subscriber/
     path: rule   #规则文件输出路径，相对路径默认从 项目目录开始
-    files:
+    文件:
       all.txt: #输出文件名
         - DOMAIN
         - REGEX
@@ -94,10 +95,10 @@ mvn spring-boot:run
 - 打开 `Github Action` 页面，选中左侧 `Update Filters` 授权 `Workflow` 定时执行(⚠ 重要步骤)
 - 点击 `Run workflow` 或等待自动执行。执行完成后相应规则生成在配置中指定的目录下
 
-#### **Codespaces**
+#### **代码空间**
 
-- 登录 `Github`，点击本仓库右上角 `Code` 按钮，选择并创建新的 `Codespaces`
-- 等待 `Codespaces` 启动，即可直接对本项目进行调试
+- 登录 `Github`，点击本仓库右上角 `代码` 按钮，选择并创建新的 `代码空间`
+- 等待 `代码空间` 启动，即可直接对本项目进行调试
 
 <br/>
 <h2 id="c">🎯 规则订阅</h2>
