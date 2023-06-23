@@ -1,6 +1,6 @@
 spring:
   application:
-    name: adg-rule
+    name: ad-rules
   profiles:
     active: prod  #切换至 dev 即可输出调试信息
 
@@ -17,32 +17,53 @@ application:
   rule:
     #远程规则
     remote:
-    #      - 'https://adrules.top/dns.txt'
+         #Oisd Big 
+         - 'https://big.oisd.nl/'
+         #anti-AD 
+         - 'https://anti-ad.net/easylist.txt'
+         #ADgk 
+         - 'https://cdn.jsdelivr.net/gh/banbendalao/ADgk@master/ADgk.txt'
+         #10007 
+         - 'https://raw.gitmirror.com/lingeringsound/10007/main/adb.txt'
+         #秋风
+         - 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Adblock-Rule/main/AWAvenue-Adblock-Rule.txt'
+         #Adaway
+         - 'https://adaway.org/hosts.txt'
+         #qq5460168-black
+         - 'https://jihulab.com/qq5460168/5460/-/raw/master/black.txt'
+         #qq5460168-white
+     # # - 'https://jihulab.com/qq5460168/5460/-/raw/master/white.txt'
+         #xlxbk-black
+         - 'https://www.xlxbk.cn/dns.txt'
+         #xlxbk-white
+         - 'https://www.xlxbk.cn/allow.txt'
+         #Cats-Team
+         - 'https://gitlab.com/cats-team/adrules/-/raw/main/dns.txt'
+         #Steam520
+    #    - 'https://cdn.jsdelivr.net/gh/pboymt/Steam520/hosts'
+         #Gfw
+    #    - 'https://github.com/Potterli20/file/releases/download/github-hosts/gfw-Hosts.txt'
+         #Accelerete -Hosts
+    #    - 'https://github.com/Potterli20/file/releases/download/github-hosts/Accelerate-Hosts.txt'
+         #hellogithub
+    #    - 'https://raw.hellogithub.com/hosts'
+         #Ad-set-hosts 
+         - 'https://raw.githubusercontent.com/rentianyu/Ad-set-hosts/master/adguard'
+    #    - 'https://example.org/rule.txt'
     #本地规则
     local: #本地规则请将文件移动到项目路径rule目录中
-  #      - 'local-rule.txt'
+        - 'local-rule.txt'
+ #      - 'local-rule.txt'
   output:
     file_header: |  #输出文件头, 占位符${name}将被替换为文件名，如all.txt,  ${date} 将被替换为当前日期
       [ADFS Adblock List]
       ! Title: ${name}
       ! Last Modified: ${date}
-      ! Homepage: https://github.com/fordes123/ad-filters-subscriber/
+      ! Homepage: https://github.com/Bibaiji/ad-rules/
     path: rule   #规则文件输出路径，相对路径默认从 项目目录开始
     文件:
-      all.txt: #输出文件名
+      ad-rules.txt: #输出文件名
         - DOMAIN  #域名规则，仅完整域名
         - REGEX   #正则规则，包含正则的域名规则，AdGH支持
         - MODIFY  #修饰规则，添加了一些修饰符号的规则，AdG支持
         - HOSTS   #Hosts规则
-      dns.txt:
-        - DOMAIN
-        - REGEX
-        - HOSTS
-      hosts.txt:
-        - HOSTS
-      regex.txt:
-        - REGEX
-      domain.txt:
-        - DOMAIN
-      modify.txt:
-        - MODIFY
